@@ -3,86 +3,163 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StudyVerse - Service</title>
+    <title>StudyVerse Points</title>
     <link rel="stylesheet" href="../css/serviceStyle.css" />
   </head>
   <body>
     <div class="container">
       <nav class="sidebar">
         <h1 class="title">
-          <span class="studyText">Study</span><span class="versetext">Verse</span>
+          <span class="studyText">Study</span
+          ><span class="verseText">Verse</span>
         </h1>
         <ul>
           <li>
             <a href="../html/home.html"
-              ><img src="../../media/homeIcon.png" alt="Home Icon" /> Home</a>
+              ><img src="../../media/homeIcon.png" alt="Home Icon" /> Home</a
+            >
           </li>
           <li>
             <a href="../html/lecture.html"
               ><img src="../../media/lectureIcon.png" alt="Lecture Icon" />
-              Lecture</a>
+              Lecture</a
+            >
           </li>
           <li>
             <a href="../html/grades.html"
               ><img src="../../media/gradeIcon.png" alt="Grades Icon" />
-              Grades</a>
+              Grades</a
+            >
           </li>
           <li>
             <a href="../html/points.html"
               ><img src="../../media/poinIcon.png" alt="Points Icon" />
-              Points</a>
+              Points</a
+            >
           </li>
           <li>
             <a href="#" class="active"
               ><img src="../../media/serviceIcon.png" alt="Service Icon" />
-              Service</a>
+              Service</a
+            >
           </li>
         </ul>
       </nav>
       <main>
         <header>
-          <h1>Welcome, Student A! 👋</h1>
           <div class="search-profile">
             <input type="text" placeholder="search" />
             <img src="../../media/profile.png" alt="Profile" />
           </div>
         </header>
         <div class="content">
-          <div class="community-service">
-            <h2>Community Service</h2>
-            <p class="hours">13/20</p>
-            <p class="notes">
-              notes: 20 hours of community service needed to be graduated
-            </p>
+          <div class="points-summary">
+            <div class="activity-points">
+              <h2>Community Service</h2>
+              <div class="points-value">13/20</div>
+              <p>
+                <span>
+                  notes: 20 hours of community service needed to be
+                  graduated</span
+                >
+              </p>
+            </div>
+            <div class="competition-points">
+              <h2>Upcoming Activity</h2>
+              <ul>
+                <li>
+                  <div class="flex-container">
+                    <div class="lomba">
+                      <strong>Monday, 14 March 2024</strong>
+                    </div>
+                    <div class="added-to">
+                      <span> Pandawara - Sungai Cikeruh</span>
+                    </div>
+                  </div>
+                </li>
+                <br />
+                <li>
+                  <div class="flex-container">
+                    <div class="lomba">
+                      <strong>Monday, 21 March 2024</strong>
+                    </div>
+                    <div class="added-to">
+                      <span> Pandawara - Pantai Kuta</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="upcoming-activity">
-            <h2>Upcoming Activity</h2>
-            <p><strong>Monday, 14 March 2024</strong></p>
-            <ul>
-              <li>Pandawara - Sungai Cikeruh</li>
-            </ul>
-            <p><strong>Monday, 21 March 2024</strong></p>
-            <ul>
-              <li>Pandawara - Pantai Kuta</li>
-            </ul>
-            <p class="registration">
-              *registration needed to join the activity
-            </p>
-          </div>
-          <div class="community-service-history">
+          <div class="points-history">
             <h2>Community Services History</h2>
             <ul>
-              <li>Pandawara - Sungai Ciliwung</li>
-              <li>Teaching - SDK Penabur 1</li>
-              <li>Church Service - GBI Aruna sunday's service</li>
-              <li>Pandawara - Sungai Cikapundung</li>
+              <li>
+                <div class="flex-container">
+                  <div class="lomba">
+                    <img
+                      src="../../media/heartIcon.png"
+                      alt="Heart Icon"
+                    />Pandawara - Sungai Ciliwung
+                  </div>
+                  <div class="added-to">
+                    <span>added to community services</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="flex-container">
+                  <div class="lomba">
+                    <img
+                      src="../../media/heartIcon.png"
+                      alt="Heart Icon"
+                    />Teaching - SDK Penabur 1
+                  </div>
+                  <div class="added-to">
+                    <span>added to community services</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="flex-container">
+                  <div class="lomba">
+                    <img
+                      src="../../media/heartIcon.png"
+                      alt="Heart Icon"
+                    />Church Service - GBI Aruna sunday's service
+                  </div>
+                  <div class="added-to">
+                    <span>added to community services</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="flex-container">
+                  <div class="lomba">
+                    <img
+                      src="../../media/heartIcon.png"
+                      alt="Heart Icon"
+                    />Pandawara - Sungai Cikapundung
+                  </div>
+                  <div class="added-to">
+                    <span>added to community services</span>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
-          <div class="submit-service">
-            <h2>Community Service Information</h2>
-            <button class="submit-button">+</button>
-            <p>Submit your community service to get community hour!</p>
-            <button class="submit-button-text">Submit</button>
+          <div class="submission-info">
+            <button class="info-button">
+              Community Service/Activity Information
+            </button>
+            <br />
+            <div class="submit">
+              <div class="submit-icon">
+                <img src="../../media/plusIcon.png" alt="Plus Icon" />
+              </div>
+              <p>Lets submit your activity/comserv here!</p>
+              <button class="submit-button" onclick="window.location.href='../html/submissionForm.html'">Submit</button>
+            </div>
           </div>
         </div>
       </main>
