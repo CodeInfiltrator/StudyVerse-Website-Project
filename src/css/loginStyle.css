@@ -1,0 +1,142 @@
+body {
+    background-image: url('../../media/leftBG.png');
+    background-size: cover;
+    background-position: right center;
+    height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 1;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+.split {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* .left .background {
+    background-image: url('leftBG.png');
+    background-size: cover;
+    background-position: 80% center;
+    height: 100%;
+    width: 150%;
+    background-size: 150%;
+    z-index: 1;
+} */
+
+.right {
+    background-image: url('../../media/rightBG.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 2;
+    position: relative;
+    background-position: 50% center; /* Adjust this value to move the image more to the left */
+    background-size: 150%; /* Adjust this value to zoom out the image */
+}
+
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1;
+}
+
+.title {
+    color: #4285f4;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+}
+
+.options input {
+    margin-right: 5px;
+}
+
+.options .forgot-password {
+    color: #4285f4;
+    text-decoration: none;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #357ae8;
+}
+
+.account-help {
+    margin-top: 20px;
+}
+
+.account-help a {
+    color: #4285f4;
+    text-decoration: none;
+}
+
+.contact {
+    margin-top: 20px;
+}
+
+.contact p {
+    margin: 0;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media .social-icon {
+    display: block;
+    color: #555;
+    text-decoration: none;
+    margin-bottom: 5px;
+}

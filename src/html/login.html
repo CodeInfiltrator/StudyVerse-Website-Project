@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyVerse Login</title>
+    <link rel="stylesheet" href="../css/loginStyle.css">
+    <script>
+        function validateForm(event) {
+            console.log('Form submitted');
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+        
+            if (email !== 'test@gmail.com' || password !== 'test123') {
+                event.preventDefault();
+                alert('Invalid username or password');
+            }
+        }
+        window.onload = function() {
+            document.getElementById('login-button').addEventListener('click', validateForm);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="split left">
+            <div class="background"></div>
+        </div>
+        <div class="split right">
+            <div class="login-container">
+                <h1 class="title">StudyVerse</h1>
+                <h2>Welcome!</h2>
+                <p>Log in to your account</p>
+                <form onsubmit="validateForm(event)">
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <div class="options">
+                        <label>
+                            <input type="checkbox"> Remember Me
+                        </label>
+                        <a href="https://www.youtube.com/watch?v=iT5dWPGTaH4" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <a href="../html/home.html" id="login-button" class="login-button">Log in</a>
+                </form>
+                <p class="account-help">
+                    Don't know your account? <a href="#">Get your account data here!</a>
+                </p>
+                <div class="contact">
+                    <p>Contact us!</p>
+                    <div class="social-media" >
+                        <a href="#" class="social-icon">📷 Instagram: studentservices</a>
+                        <a href="#" class="social-icon">🎵 TikTok: student.services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyVerse</title>
+    <link rel="stylesheet" href="../css/lectureStyle.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <h1 class="title"><span class="studyText">Study</span><span class="verseText">Verse</span></h1>
+            <ul>
+                <li><a href="../html/home.html"><img src="../../media/homeIcon.png" alt="Home Icon"> Home</a></li>
+                <li><a href="#" class="active"><img src="../../media/lectureIcon.png" alt="Lecture Icon"> Lecture</a></li>
+                <li><a href="../html/grades.html"><img src="../../media/gradeIcon.png" alt="Grades Icon"> Grades</a></li>
+                <li><a href="../html/points.html"><img src="../../media/poinIcon.png" alt="Points Icon"> Points</a></li>
+                <li><a href="../html/service.html"><img src="../../media/serviceIcon.png" alt="Service Icon"> Service</a></li>
+            </ul>
+        </nav>
+        <main>
+            <header>
+                <h1></h1>   
+                <div class="search-profile">
+                    <input type="text" placeholder="search">
+                    <img src="../../media/profile.png" alt="Profile">
+                </div>
+            </header>
+            <div class="content">
+                <div class="left-content">
+                    <div class="upcoming-classes">
+                        <h2>Upcoming Class</h2>
+                        <ul>
+                            <li><strong> Monday, 14 March 2024 </strong>
+                                <ul>
+                                    <li>Calculus</li>
+                                    <li>Data Structure</li>
+                                </ul>
+                            </li>
+                            <li><strong> Tuesday, 15 March 2024 </strong>
+                                <ul>
+                                    <li>Data Structure: Lab</li>
+                                    <li>Calculus</li>
+                                </ul>
+                            </li>
+                            <li><strong>Wednesday, 16 March 2024</strong>
+                                <ul>
+                                    <li>Basic Statistic</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="assignments">
+                        <h2>Assignment</h2>
+                        <ul>
+                            <li><strong>Calculus</strong><br>3 Days until deadline</li>
+                            <li><strong>Discrete Mathematics</strong><br>1 Week until deadline</li>
+                            <li><strong>Data Structure</strong><br>1 Week until deadline</li>
+                            <li><strong>That's All!<br>Waiting for more?</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <button class="nav-button" onclick="navigateMonth(-1)">&#9664;</button>
+                            <span class="month-year" id="monthYear">June 2024</span>
+                            <button class="nav-button" onclick="navigateMonth(1)">&#9654;</button>
+                        </div>
+                        <div class="calendar-body">
+                            <div class="day-names">
+                                <div>Sun</div>
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                            </div>
+                            <div class="days" id="calendarDays">
+                                <!-- Days will be dynamically generated here -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="attendance">
+                        <h2>Attendance Information</h2>
+                        <button>Check</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const currentDate = new Date();
+        let selectedDate = new Date(currentDate);
+        const daysContainer = document.getElementById('calendarDays');
+        const monthYearDisplay = document.getElementById('monthYear');
+
+        function generateCalendar(date) {
+            const year = date.getFullYear();
+            const month = date.getMonth();
+            const firstDay = new Date(year, month, 1).getDay();
+            const lastDate = new Date(year, month + 1, 0).getDate();
+
+            monthYearDisplay.textContent = date.toLocaleString('default', { month: 'long', year: 'numeric' });
+
+            daysContainer.innerHTML = '';
+            for (let i = 0; i < firstDay; i++) {
+                const emptyCell = document.createElement('div');
+                daysContainer.appendChild(emptyCell);
+            }
+
+            for (let day = 1; day <= lastDate; day++) {
+                const dayCell = document.createElement('div');
+                dayCell.textContent = day;
+                dayCell.className = 'day';
+                if (day === currentDate.getDate() && month === currentDate.getMonth() && year === currentDate.getFullYear()) {
+                    dayCell.classList.add('current-day');
+                }
+                dayCell.addEventListener('click', () => {
+                    const selectedElements = document.querySelectorAll('.selected-day');
+                    selectedElements.forEach(el => el.classList.remove('selected-day'));
+                    dayCell.classList.add('selected-day');
+                });
+                daysContainer.appendChild(dayCell);
+            }
+        }
+
+        function navigateMonth(direction) {
+            selectedDate.setMonth(selectedDate.getMonth() + direction);
+            generateCalendar(selectedDate);
+        }
+
+        window.onload = () => {
+            generateCalendar(selectedDate);
+        };
+    </script>
+</body>
+</html>

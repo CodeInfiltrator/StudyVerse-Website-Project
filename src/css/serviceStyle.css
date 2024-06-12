@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4fa;
+    color: #333;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #3b82f6;
+    padding: 20px;
+}
+
+.sidebar .title {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.sidebar .title .studyText {
+    font-weight: bold;
+}
+
+.sidebar .title .versetext {
+    font-weight: lighter;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a img {
+    margin-right: 10px;
+}
+
+.sidebar ul li a.active {
+    background-color: #2563eb;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+.search-profile {
+    display: flex;
+    align-items: center;
+}
+
+.search-profile input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.search-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.content > div {
+    flex: 1 1 45%; /* Ensure each card takes up about half the available space, with room for margins */
+    min-width: 300px; /* Ensure a minimum width for smaller screens */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.community-service h2,
+.upcoming-activity h2,
+.community-service-history h2,
+.submit-service h2 {
+    margin-bottom: 20px;
+}
+
+.community-service .hours {
+    font-size: 48px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.community-service .notes {
+    font-size: 14px;
+    color: #999;
+}
+
+.upcoming-activity p,
+.community-service-history ul {
+    margin-bottom: 10px;
+}
+
+.upcoming-activity ul,
+.community-service-history ul {
+    list-style: none;
+}
+
+.upcoming-activity ul li,
+.community-service-history ul li {
+    margin-bottom: 10px;
+}
+
+.registration {
+    font-size: 12px;
+    color: #999;
+}
+
+.submit-service {
+    text-align: center;
+}
+
+.submit-service .submit-button {
+    width: 50px;
+    height: 50px;
+    background-color: #a855f7;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.submit-service p {
+    margin-bottom: 20px;
+}
+
+.submit-service .submit-button-text {
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
