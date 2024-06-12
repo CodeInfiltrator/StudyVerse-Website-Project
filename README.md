@@ -2,7 +2,7 @@
 
 ### Project Description: StudyVerse LMS Website
 
-The StudyVerse LMS (Learning Management System) website is an integrated platform designed to enhance the academic experience of college students primarily aged 18-25. The project was developed by a team including , Emanuelle Frizzia Darren, Alvin, Michael W., and Mikhael.
+The StudyVerse LMS (Learning Management System) website is an integrated platform designed to enhance the academic experience of college students primarily aged 18-25. The project was developed by a team including Emanuelle Frizzia Darren, Alvin, Michael Wijaya, and Mikhael.
 
 #### Key Features:
 
